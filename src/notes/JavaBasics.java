@@ -42,8 +42,8 @@ public class JavaBasics {
     /* System.in is the default input (console/keyboard) */
     Scanner keyboard = new Scanner(System.in);
     System.out.printf("Enter your full name%n");
-//    String fullName = keyboard.nextLine();
-//    System.out.printf("Your name is %s%n", fullName);
+    String fullName = keyboard.nextLine();
+    System.out.printf("Your name is %s%n", fullName);
     /* Java primitive data types */
     System.out.println("\n## Data types");
     divider();
@@ -106,7 +106,7 @@ public class JavaBasics {
     oneSymbol++;
     System.out.println(oneSymbol);
     for (int i = 32; i < 127; i++) {
-      System.out.printf("%c%n", i);
+      System.out.println(i);
     }
     /* Conditions */
     System.out.println("\n## Conditions");
