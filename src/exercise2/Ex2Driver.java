@@ -1,5 +1,6 @@
 package exercise2;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -116,7 +117,9 @@ public class Ex2Driver {
    */
   public static void task6() {
     ArrayList<Double> arr = new ArrayList();
-    throw new UnsupportedOperationException("Task 6 is not implemented yet.");
+    Scanner keyboard = new Scanner(System.in);
+    Double newNum = keyboard.nextDouble();
+    System.out.printf("Enter a number(0 to exit)%n");
   }
   /**
    * TODO: Task 7: Create an ArrayList of integer values of size 10 and initialize each element of the ArrayList to a random number between 50 and 100.
