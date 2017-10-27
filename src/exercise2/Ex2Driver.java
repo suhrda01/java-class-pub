@@ -5,6 +5,7 @@ import java.util.Random;
 
 /**
  * @author suhrda01
+ * @author yasiro01
  */
 public class Ex2Driver {
   public static void main(String args[]) {
@@ -18,6 +19,7 @@ public class Ex2Driver {
     for (int i = 0; i < 10; i++) {
       numberLst.add(rnd.nextInt(100));
     }
+
     //task1(3);
     System.out.println(task2(numberArr, 90));
     System.out.println(task3(numberArr, 75));
@@ -57,6 +59,7 @@ public class Ex2Driver {
   /**
    * TODO: Task 3: Write a function that takes an array of integers and a threshold and prints how many values are below the threshold.
    * @param arr
+<<<<<<< HEAD
    * @param threshold 
    * @return
    */
@@ -152,3 +155,4 @@ public class Ex2Driver {
       
   }
 }
+
