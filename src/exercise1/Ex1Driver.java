@@ -3,6 +3,7 @@ package exercise1;
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Math;
+import java.util.ArrayList;
 
 /**
  * @author suhrda01
@@ -17,7 +18,7 @@ public class Ex1Driver {
       numbers[i] = rnd.nextInt(10);
     }
     task1();
-    task2();
+    /*task2();
     task3();
     task4();
     task5();
@@ -25,7 +26,7 @@ public class Ex1Driver {
     task7();
     task8(numbers);
     task9();
-    task10();
+    task10();*/
   }
 
   /**
@@ -33,6 +34,8 @@ public class Ex1Driver {
    */
   public static void task1() {
     System.out.println("Hello World");
+    ArrayList<String> arrList = new ArrayList(10);
+    System.out.println(arrList.size());
   }
   /**
    * TODO: Task 2: Print all numbers between 1 and 100 (inclusive) replacing all multiples of 3 with "foo", multiples of 5 with "bar", multiples of 3 and 5 with "huh"

@@ -6,5 +6,28 @@ package exercise5;
  * @author yasiro01
  */
 public class Company {
+    private String company;
+    private double stockPrice;
+    
+    public Company(String company, double stockPrice) {
+        this.company = company;
+        this.stockPrice = stockPrice;
+    }
+    
+    public String getName() {
+    return company;
+  }
+
+  public double getStockPrice() {
+    return stockPrice;
+  }
   
+  public void setStockPrice(double stockPrice) {
+      this.stockPrice = stockPrice;
+  }
+  
+  @Override
+  public String toString() {
+    return String.format("%s trading at $%.2f", company, stockPrice);
+  }
 }

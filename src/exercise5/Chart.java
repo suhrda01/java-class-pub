@@ -17,5 +17,9 @@ import java.util.regex.Pattern;
  * @author yasiro01
  */
 public class Chart {
+    private HashMap<Integer, Song> chart;
+}
+
+public Chart(String file) {
 
 }
