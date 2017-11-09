@@ -1,10 +1,12 @@
 package exercise5;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,10 +18,23 @@ import java.util.regex.Pattern;
  */
 public class Roster {
     private ArrayList<Student> studentList;
+
+    public Roster(String filename) throws FileNotFoundException, IOException {
+        File inputFile = new File(filename);
+        Scanner lineContent = new Scanner(inputFile);
+        while (lineContent.hasNextLine()) {
+            String line = lineContent.nextLine();
+            String[] lineSplit = line.split(",");
+            Student student = new Student(lineSplit[0], lineSplit[1], Double.parseDouble(lineSplit[2]));
+            studentList.add(student);
+        }
+    }
+    
+    public String printRoster() {
+        String roster = "";
+        for (Student person : studentList) {
+            roster = roster + (person.toString() + "\n");
+        }
+        return roster;
+    }
 }
-
-public Roster(String file) {
-
-}
-
-public 

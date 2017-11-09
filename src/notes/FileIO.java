@@ -69,12 +69,14 @@ public class FileIO {
     }
     
   }
+  
   /**
    * Generate a file of random records
    * @param filename
    * @throws FileNotFoundException
    * @throws IOException 
    */
+  
   public static void generateFile(String filename) throws FileNotFoundException, IOException {
     Faker faker = new Faker();
     /* BufferedWriter allows writing to a file */

@@ -1,10 +1,12 @@
 package exercise5;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -18,8 +20,20 @@ import java.util.regex.Pattern;
  */
 public class Chart {
     private HashMap<Integer, Song> chart;
-}
 
-public Chart(String file) {
+    public Chart(String filename) throws FileNotFoundException {
+        File inputFile = new File(filename);
+        Scanner lineContent = new Scanner(inputFile);
+        while (lineContent.hasNextLine()) {
+            String line = lineContent.nextLine();
+            String[] lineSplit = line.split(",");
+            int rank = Integer.parseInt(lineSplit[0]);
+            Song song = new Song(lineSplit[1], lineSplit[2]);
+            chart.put(rank, song);
+        }
+    }
 
+    public Song getSong(int index) {
+        return chart.get(index);
+    }
 }
