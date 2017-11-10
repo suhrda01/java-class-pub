@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @author yasiro01
  */
 public class Chart {
-    private HashMap<Integer, Song> chart;
+    private HashMap<Integer, Song> chart = new HashMap();
 
     public Chart(String filename) throws FileNotFoundException {
         File inputFile = new File(filename);

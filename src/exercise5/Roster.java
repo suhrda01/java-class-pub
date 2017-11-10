@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  * @author yasiro01
  */
 public class Roster {
-    private ArrayList<Student> studentList;
+    private ArrayList<Student> studentList = new ArrayList();
 
     public Roster(String filename) throws FileNotFoundException, IOException {
         File inputFile = new File(filename);
