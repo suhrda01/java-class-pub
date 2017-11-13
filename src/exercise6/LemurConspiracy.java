@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class LemurConspiracy {
     private HashSet<Lemur> lemurSet = new HashSet();
     
-    public LemurConspiracy(String filename) throws FileNotFoundException{
+    public LemurConspiracy(String filename) {
+        try {
         File inputFile = new File(filename);
         Scanner lineContent = new Scanner(inputFile);
         while (lineContent.hasNextLine()) {
@@ -23,6 +24,9 @@ public class LemurConspiracy {
                 lemurSet.add(newLemur);
             }
             
+        }
+        } catch(FileNotFoundException f) {
+            System.out.println("File not found");
         }
     }
     

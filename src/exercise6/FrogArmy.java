@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class FrogArmy {
     private ArrayList<Frog> frogList = new ArrayList();
     
-    public FrogArmy(String filename) throws FileNotFoundException{
+    public FrogArmy(String filename) {
+        try {
         File inputFile = new File(filename);
         Scanner lineContent = new Scanner(inputFile);
         while (lineContent.hasNextLine()) {
@@ -23,6 +24,9 @@ public class FrogArmy {
                 frogList.add(newFrog);
             }
             
+        }
+        } catch(FileNotFoundException f) {
+            System.out.println("File not found");
         }
     }
     

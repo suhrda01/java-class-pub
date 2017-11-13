@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class KangarooMob {
     private HashSet<Kangaroo> kangarooSet = new HashSet();
     
-    public KangarooMob(String filename) throws FileNotFoundException{
+    public KangarooMob(String filename) {
+        try {
         File inputFile = new File(filename);
         Scanner lineContent = new Scanner(inputFile);
         while (lineContent.hasNextLine()) {
@@ -23,6 +24,9 @@ public class KangarooMob {
                 kangarooSet.add(newKangaroo);
             }
             
+        }
+        } catch(FileNotFoundException f) {
+            System.out.println("File not found");
         }
     }
     

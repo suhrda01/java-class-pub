@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class CrowMurder {
     private ArrayList<Crow> crowList = new ArrayList();
     
-    public CrowMurder(String filename) throws FileNotFoundException{
+    public CrowMurder(String filename){
+        try {
         File inputFile = new File(filename);
         Scanner lineContent = new Scanner(inputFile);
         while (lineContent.hasNextLine()) {
@@ -23,6 +24,9 @@ public class CrowMurder {
                 crowList.add(newCrow);
             }
             
+        }
+        } catch(FileNotFoundException f) {
+            System.out.println("File not found");
         }
     }
     

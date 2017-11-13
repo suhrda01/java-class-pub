@@ -12,7 +12,8 @@ import java.util.Scanner;
 public class OwlParliament {
     private HashSet<Owl> owlSet = new HashSet();
     
-    public OwlParliament(String filename) throws FileNotFoundException{
+    public OwlParliament(String filename) {
+        try {
         File inputFile = new File(filename);
         Scanner lineContent = new Scanner(inputFile);
         while (lineContent.hasNextLine()) {
@@ -23,6 +24,9 @@ public class OwlParliament {
                 owlSet.add(newOwl);
             }
             
+        }
+        } catch(FileNotFoundException f) {
+            System.out.println("File not found");
         }
     }
     
